@@ -1,0 +1,111 @@
+<!-- expand/collapse behavior adapted from https://github.com/angular-ui/bootstrap/blob/master/misc/demo/index.html -->
+
+
+
+<!-- Sidebar -->
+
+<md-sidenav class="md-sidenav-left" md-component-id="left" md-whiteframe="4">
+
+  <md-toolbar class="md-theme-blue" ng-class="{'md-toolbar-closed': !vm.isOpen(), 'md-toolbar-open': vm.isOpen()}" md-whiteframe="1">
+
+        <div class="row">
+
+            <div class="col-md-4 col-md-offset-2">
+
+                <ul class="ch-grid" ng-if="vm.isOpen()">
+                    <li>
+                        <div class="ch-item ch-img-1">
+                            <div class="ch-info">
+                                <h3>Use what you have</h3>
+                                <p>by Angela Duncan <a href="http://drbl.in/eOPF">View on Dribbble</a></p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="col-md-3 col-md-offset-3">
+
+                <md-button class="hamburger md-icon-button" ng-class="{'hamburger--slider is-active': vm.isOpen()}" type="button" ng-click="hamburger = !hamburger; vm.toggleLeft()" aria-label="Menu" md-whiteframe="2">
+                  <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                  </span>
+                </md-button>
+
+            </div>
+
+        </div>        
+
+
+  </md-toolbar>
+
+    <md-content>
+      
+      <md-list flex ng-if="vm.isOpen()">
+
+        <md-list-item class="md-2-line" ng-click="null" aria-label="">
+          <div class="md-list-item-text" layout="column">
+            <h3><ng-md-icon icon="view_quilt"></ng-md-icon>  Dashboard</h3>
+          </div>
+        </md-list-item>
+
+        <md-divider ></md-divider>
+
+        <md-list-item class="md-2-line" ng-click="null" aria-label="">
+          <div class="md-list-item-text" layout="column">
+            <h3>Statistics</h3>
+          </div>
+        </md-list-item>
+
+        <md-divider ></md-divider>
+
+        <md-list-item class="md-2-line" ng-click="null" aria-label="">
+          <div class="md-list-item-text" layout="column">
+            <ng-md-icon icon="desktop_windows"></ng-md-icon> 
+          </div>
+        </md-list-item>
+
+      </md-list>
+
+    </md-content>
+
+    <md-content ng-if="!vm.isOpen()">
+
+        <div class="pull-right">
+
+                <md-list>
+
+                    <md-list-item class="md-2-line" ng-click="null" aria-label="button">
+                        <div class="md-list-item text-center" layout="column">
+                            <ng-md-icon icon="view_quilt"></ng-md-icon> 
+                        </div>
+                    </md-list-item>
+
+                    <md-divider ></md-divider>
+
+                    <md-list-item class="md-2-line" ng-click="null" aria-label="button">
+                        <div class="md-list-item-text text-center" layout="column">
+                            <ng-md-icon icon="desktop_windows"></ng-md-icon> 
+                        </div>
+                    </md-list-item>
+
+                    <md-divider ></md-divider>
+
+                    <md-list-item class="md-2-line" ng-click="null" aria-label="button">
+                        <div class="md-list-item-text text-center" layout="column">
+                            <ng-md-icon icon="desktop_windows"></ng-md-icon> 
+                        </div>
+                    </md-list-item>
+
+                    <md-divider ></md-divider>
+
+                </md-list>
+
+
+        </div>
+
+    </md-content>
+
+</md-sidenav>
+

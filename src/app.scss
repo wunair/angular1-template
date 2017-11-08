@@ -1,0 +1,13 @@
+@import "core/styles/variables";
+
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+
+@import "../bower_components/css-hamburgers/_sass/hamburgers/hamburgers";
+
+@import "core/styles/core";
+
+@import "components/sidenav/sidenav";
+
+body {
+  padding-left: 64px;
+}

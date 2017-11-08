@@ -1,0 +1,35 @@
+<!-- Sidebar -->
+
+<md-sidenav class="md-sidenav-left" md-component-id="left" md-whiteframe="4">
+
+  <md-toolbar class="md-theme-blue-grey" ng-class="{'md-toolbar-open': vm.isOpen(), 'md-toolbar-closed': !vm.isOpen()}">
+
+    <md-grid-list
+        md-cols-xs="1" md-cols-sm="2" md-cols-md="4" md-cols-gt-md="6"
+        md-row-height-gt-md="1:1" md-row-height="2:2"
+        md-gutter="12px" md-gutter-gt-sm="8px" >
+
+        <md-grid-tile md-colspan="5">
+
+        </md-grid-tile>
+
+        <md-grid-tile md-colspan="1">
+
+                <md-button ng-class="md-icon-button; hamburger; {' hamburger--slider is-active': vm.isOpen(), ' hamburger--slider': !vm.isOpen()}" type="button" ng-click="hamburger = !hamburger; vm.toggleLeft()" aria-label="Menu">
+                  <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                  </span>
+                </md-button>
+
+        </md-grid-tile>
+
+  </md-grid-list>
+  </md-toolbar>
+
+  <md-content layout-margin>
+
+
+    
+  </md-content>
+
+</md-sidenav>

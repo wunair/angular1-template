@@ -1,0 +1,35 @@
+<section id="dashboard-view" class="container-fluid">
+
+    <h1>Dashboard</h1>
+
+    <div layout-margin>
+
+      <mdt-table mdt-row="{
+                          data: vm.nutritionList,
+                          'column-keys': [
+                              'name',
+                              'calories',
+                              'fat',
+                              'carbs',
+                              'protein',
+                              'sodium',
+                              'calcium',
+                              'iron'
+                          ]
+                          }">
+        <mdt-header-row>
+          <mdt-column align-rule="left" column-definition="Dessert" column-sort="true">Dessert (100g serving)</mdt-column>
+          <mdt-column align-rule="right" column-definition="Calories" column-sort="true">Calories</mdt-column>
+          <mdt-column align-rule="right" column-definition="Fat" column-sort="true">Fat (g)</mdt-column>
+          <mdt-column align-rule="right" column-definition="Carbs" column-sort="true">Carbs (g)</mdt-column>
+          <mdt-column align-rule="right" column-definition="Protein" column-sort="true">Protein (g)</mdt-column>
+          <mdt-column align-rule="right" column-definition="Sodium" column-sort="true">Sodium (mg)</mdt-column>
+          <mdt-column align-rule="right" column-definition="Calcium">Calcium (%)</mdt-column>
+          <mdt-column align-rule="right" column-definition="Iron">Iron (%)</mdt-column>
+        </mdt-header-row>
+      </mdt-table>
+    </div>
+
+    </div>
+
+</section>
